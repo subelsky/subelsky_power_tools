@@ -1,4 +1,4 @@
-guard 'spork', :rspec_port => 9500 do
+guard 'spork', :rspec_port => 9501 do
   watch(%r{^spec/spec_helper.rb$})
 end
 

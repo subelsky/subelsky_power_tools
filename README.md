@@ -12,6 +12,12 @@ The name is a tribute to [Topfunky Power Tools](http://topfunky.net/svn/plugins/
 
 # Usage
 
+The gem does not automatically require anything, so you can pick and choose which extensions get
+added, by requiring them individually, e.g.:
+
+    require 'subelsky_power_tools/ext/hash'
+    require 'subelsky_power_tools/ext/exception'
+
 See the individual extensions in `lib` or their tests in the `spec` directory.
 
 # Problems? Questions?

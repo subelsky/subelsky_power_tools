@@ -1,7 +1,8 @@
-require 'spork'
+require "spork"
+$:.unshift(File.join(File.dirname(__FILE__),"..","lib"))
 
 Spork.prefork do
-  require 'rspec'
+  require "rspec"
 
   RSpec.configure do |config|
     config.mock_with :rspec

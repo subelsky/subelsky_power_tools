@@ -17,6 +17,7 @@ added, by requiring them individually, e.g.:
 
     require 'subelsky_power_tools/ext/hash'
     require 'subelsky_power_tools/ext/exception'
+    require 'subelsky_power_tools/ext/kernel'
 
 See the individual extensions in `lib` or their tests in the `spec` directory.
 

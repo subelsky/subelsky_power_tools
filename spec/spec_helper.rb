@@ -28,4 +28,5 @@ Spork.prefork do
 end
 
 Spork.each_run do
+  #load "subelsky_power_tools/ext/kernel.rb"
 end

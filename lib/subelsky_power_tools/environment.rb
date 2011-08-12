@@ -1,3 +1,5 @@
+require "subelsky_power_tools"
+
 module SubelskyPowerTools::Environment
   extend self
 

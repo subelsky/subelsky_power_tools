@@ -1,3 +1,7 @@
+v1.0.2
+======
+* Added environment variable enforcer; I use this all the time in rake tasks
+
 v1.0.1
 ======
 * Added Kernel#retryable for exception retrying

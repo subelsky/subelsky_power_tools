@@ -1,3 +1,7 @@
+v1.1.0
+======
+* Changed signature of variable enforcer and made it return extracted values
+
 v1.0.2
 ======
 * Added environment variable enforcer; I use this all the time in rake tasks

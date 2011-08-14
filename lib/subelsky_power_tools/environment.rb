@@ -3,11 +3,13 @@ require "subelsky_power_tools"
 module SubelskyPowerTools::Environment
   extend self
 
-  def enforce_variables(*vals)
-    msg = "Must specify #{vals.map(&:upcase).join(", ")}"
+  def extract(*keys)
+    keys.map! { |k| k.upcase.to_s }
+    msg = "Must specify #{keys.join(", ")}"
 
-    vals.each do |val|
-      fail msg if ENV[val].to_s.strip.empty?
+    keys.inject([]) do |total,key|
+      fail msg if ENV[key].to_s.strip.empty?
+      total << ENV[key]
     end
   end
 end

@@ -1,10 +1,20 @@
 #!/usr/bin/env ruby"
 
-require 'rake/clean'
-require 'rake/testtask'
+require "rubygems"
+require "bundler"
 
-task :default => :spec
+desc "release"
+task :release do
+  require "./lib/subelsky_power_tools/version.rb"
 
-task :spec do
-  sh "rspec spec"
+  puts "Getting ready to tag and release #{SubelskyPowerTools::VERSION} - is this correct?"
+  answer = $stdin.gets.chomp!
+
+  exit if answer =~ /n/i
+
+  `bundle`
+  `git commit -ma "v#{SubelskyPowerTools::VERSION}"`
+  `git tag '#{SubelskyPowerTools::VERSION}'`
+  `gem build subelsky_power_tools.gemspec`
+  `gem push subelsky_power_tools-#{SubelskyPowerTools::VERSION}`
 end

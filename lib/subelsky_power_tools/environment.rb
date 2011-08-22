@@ -18,7 +18,7 @@ module SubelskyPowerTools::Environment
     msg = "Must specify #{keys.join(", ")}"
 
     keys.inject([]) do |total,key|
-      fail msg if raise_error_if_blank && ENV[key].to_s.strip.empty?
+      raise msg if raise_error_if_blank && ENV[key].to_s.strip.empty?
       total << ENV[key]
     end
   end

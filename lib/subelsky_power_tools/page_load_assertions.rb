@@ -1,5 +1,5 @@
 # assertions for use with Capybara
-module PageLoadAssertons
+module PageLoadAssertions
   def visit!(path,*args)
     visit path,*args
     should_load(path)

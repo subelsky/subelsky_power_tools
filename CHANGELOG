@@ -1,3 +1,7 @@
+v1.2.3
+=====
+* Fix PageLoadAssertions typo!
+
 v1.2.2
 ======
 * Added PageLoadAssertions for capybara

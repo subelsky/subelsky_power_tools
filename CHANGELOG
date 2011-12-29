@@ -1,3 +1,7 @@
+v1.2.2
+======
+* Added PageLoadAssertions for capybara
+
 v1.1.0
 ======
 * Changed signature of variable enforcer and made it return extracted values

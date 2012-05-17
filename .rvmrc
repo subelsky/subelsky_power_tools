@@ -1,1 +1,1 @@
-rvm use 1.9.2-p180-patched@subelsky_power_tools --create
+rvm use 1.9.2-p180-patched --create

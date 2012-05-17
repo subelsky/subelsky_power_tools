@@ -15,7 +15,6 @@ GEM
     guard-spork (0.2.0)
       guard (>= 0.2.2)
       spork (>= 0.8.4)
-    rb-fsevent (0.4.0)
     rspec (2.6.0)
       rspec-core (~> 2.6.0)
       rspec-expectations (~> 2.6.0)
@@ -31,9 +30,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  growl (= 1.0.3)
-  guard-rspec (= 0.4.0)
-  guard-spork (= 0.2.0)
-  rb-fsevent (= 0.4.0)
+  growl
+  guard-rspec
+  guard-spork
   rspec
   subelsky_power_tools!

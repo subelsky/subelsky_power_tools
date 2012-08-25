@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    subelsky_power_tools (1.2.5)
+    subelsky_power_tools (1.2.6)
 
 GEM
   remote: http://rubygems.org/

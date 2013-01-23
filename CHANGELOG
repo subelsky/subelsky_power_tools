@@ -1,7 +1,15 @@
 v1.2.6
 ======
-* Controller shared behavior can now test Rails controllers that use nested
-routes
+* Controller shared behavior can now test Rails controllers that use nested routes
+
+v1.2.5
+======
+* allow some shared controller behavior specs to be skipped
+
+v1.2.4
+======
+* Fix gemset and gems
+* Add shared controller behavior
 
 v1.2.3
 =====

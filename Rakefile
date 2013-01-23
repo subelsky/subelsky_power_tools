@@ -17,5 +17,5 @@ task :release do
   `git tag '#{SubelskyPowerTools::VERSION}'`
   `git push origin '#{SubelskyPowerTools::VERSION}'`
   `gem build subelsky_power_tools.gemspec`
-  `gem push subelsky_power_tools-#{SubelskyPowerTools::VERSION}`
+  `gem push subelsky_power_tools-#{SubelskyPowerTools::VERSION}.gem`
 end

@@ -1,3 +1,8 @@
+v1.2.7
+======
+* add custom ActiveRecord to_s method, useful for log messages
+* add sidekiq assertions
+
 v1.2.6
 ======
 * Controller shared behavior can now test Rails controllers that use nested routes

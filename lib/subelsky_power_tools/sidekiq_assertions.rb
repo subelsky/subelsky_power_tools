@@ -1,3 +1,6 @@
+# MyWorker.should have_queued_job(2)
+# Collector.should have_queued_job_at(Time.new(2012,1,23,14,00),2)
+
 RSpec::Matchers.define :have_queued_job do |*expected|
   match do |actual|
     actual.jobs.any? { |job| job["args"] == Array(expected) }

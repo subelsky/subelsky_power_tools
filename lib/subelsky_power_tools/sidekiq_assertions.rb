@@ -3,7 +3,7 @@
 
 RSpec::Matchers.define :have_queued_job do |*expected|
   match do |actual|
-    actual.jobs.any? { |job| job["args"] == Array(expected) }
+    actual.jobs.any? { |job| Array(expected) == job["args"] }
   end
 
   failure_message_for_should do |actual|

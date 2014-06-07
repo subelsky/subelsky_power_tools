@@ -27,8 +27,8 @@ describe SubelskyPowerTools::Environment do
 
     it "returns the value of the extracted variables" do
       val1, val2 = conduct_test("alpha","beta")
-      val1.should == "alpha"
-      val2.should == "beta"
+      expect(val1).to eq("alpha")
+      expect(val2).to eq("beta")
     end
   end
 
@@ -53,8 +53,8 @@ describe SubelskyPowerTools::Environment do
 
     it "returns the value of the extracted variables" do
       val1, val2 = conduct_test(nil,"beta")
-      val1.should == nil
-      val2.should == "beta"
+      expect(val1).to eq(nil)
+      expect(val2).to eq("beta")
     end
   end
 end

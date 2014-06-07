@@ -13,7 +13,7 @@ describe "Kernel#retryable" do
     rescue ArgumentError
     end
 
-    count.should == 3
+    expect(count).to eq(3)
   end
 
   it "reraises exceptions after exhausting all tries" do
@@ -24,7 +24,7 @@ describe "Kernel#retryable" do
 
   it "waits specified number of seconds between tries" do
     # this seems like a better way to measure sleep than using the clock
-    Kernel.should_receive(:sleep).with(0.2).exactly(2).times
+    expect(Kernel).to receive(:sleep).with(0.2).exactly(2).times
 
     begin
       retryable(tries: 3,sleep: 0.2) { raise ArgumentError }
@@ -44,7 +44,7 @@ describe "Kernel#retryable" do
       49
     end
 
-    result.should == 49
+    expect(result).to eq(49)
   end
 
 end

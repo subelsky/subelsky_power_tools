@@ -6,7 +6,7 @@ describe Exception do
     begin
       raise StandardError.new("something bad happened")
     rescue StandardError => e
-      e.detail.should =~ /StandardError: something bad happened\n/
+      expect(e.detail).to match(/StandardError: something bad happened\n/)
     end
   end
 end

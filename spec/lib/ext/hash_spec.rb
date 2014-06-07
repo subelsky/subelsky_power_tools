@@ -8,23 +8,23 @@ describe Hash do
   end
 
   it "should except given keys" do
-    h.except(:a).should == { :b => 2, :c => 3 }
-    h.except(:a,:c).should == { :b => 2 }
+    expect(h.except(:a)).to eq({ :b => 2, :c => 3 })
+    expect(h.except(:a,:c)).to eq({ :b => 2 })
   end
 
   it "should perform destructive exceptions" do
-    h.except!(:c).should == { :c => 3 }
-    h.should == { :a => 1, :b => 2 }
+    expect(h.except!(:c)).to eq({ :c => 3 })
+    expect(h).to eq({ :a => 1, :b => 2 })
     h.except!(:a,:b)
-    h.should be_empty
+    expect(h).to be_empty
   end
 
   it "should include given keys only" do
-    h.only(:a,:b).should == { :a => 1, :b => 2 }
+    expect(h.only(:a,:b)).to eq({ :a => 1, :b => 2 })
   end
 
   it "should perform destructive inclusion" do
-    h.only!(:c).should == { :a => 1, :b => 2}
-    h.should == { :c => 3 }
+    expect(h.only!(:c)).to eq({ :a => 1, :b => 2})
+    expect(h).to eq({ :c => 3 })
   end
 end

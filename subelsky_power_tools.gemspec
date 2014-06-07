@@ -14,10 +14,10 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
   s.summary = %q{This is a collection of Ruby extensions and utilities I've been carting around from project to project.}
   s.description = <<-DESC
-This is a collection of Ruby extensions and utilities I've been carting around from project to project. 
+This is a collection of Ruby extensions and utilities I've been carting around from project to project.
 Many are taken from the Facets project (I just don't want to include that whole gem in my codebases).
 DESC
   s.test_files = `git ls-files spec`.split("\n")
-  s.add_development_dependency 'rspec'
+  s.add_development_dependency 'rspec', "~> 3.0"
   s.license = "MIT"
 end

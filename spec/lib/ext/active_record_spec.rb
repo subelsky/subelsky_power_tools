@@ -14,5 +14,5 @@ describe ActiveRecord::Base do
   Widget = Class.new(ActiveRecord::Base)
   subject { Widget.new }
 
-  its(:to_s) { should eq("Widget 50") }
+  specify { expect(subject.to_s).to eq("Widget 50") }
 end

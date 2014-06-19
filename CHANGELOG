@@ -1,3 +1,11 @@
+v1.3.1
+======
+* fix other sidekiq assertions to work with rspec 3
+
+v1.3.0
+======
+* fix sidekiq assertions to work with rspec 3
+
 v1.2.7
 ======
 * add custom ActiveRecord to_s method, useful for log messages
